@@ -1,0 +1,223 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>强化学习样本 - Machine Learning Yearning</title>
+
+
+        <!-- Custom HTML head -->
+        
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="icon" href="favicon.svg">
+        <link rel="shortcut icon" href="favicon.png">
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+        <link rel="stylesheet" href="css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="highlight.css">
+        <link rel="stylesheet" href="tomorrow-night.css">
+        <link rel="stylesheet" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="index.html">引言</a></li><li class="chapter-item expanded "><a href="chapter1.html"><strong aria-hidden="true">1.</strong> 机器学习策略的原因</a></li><li class="chapter-item expanded "><a href="chapter2.html"><strong aria-hidden="true">2.</strong> 如何使用本书来帮助您的团队</a></li><li class="chapter-item expanded "><a href="chapter3.html"><strong aria-hidden="true">3.</strong> 预备知识和注释</a></li><li class="chapter-item expanded "><a href="chapter4.html"><strong aria-hidden="true">4.</strong> 规模推动机器学习进步</a></li><li class="chapter-item expanded "><a href="chapter5.html"><strong aria-hidden="true">5.</strong> 您的开发和测试集</a></li><li class="chapter-item expanded "><a href="chapter6.html"><strong aria-hidden="true">6.</strong> 你的开发集和测试集应该来自相同的分布</a></li><li class="chapter-item expanded "><a href="chapter7.html"><strong aria-hidden="true">7.</strong> 开发集/测试集需要多大</a></li><li class="chapter-item expanded "><a href="chapter8.html"><strong aria-hidden="true">8.</strong> 为您的团队建立单一数字的评估指标以进行优化</a></li><li class="chapter-item expanded "><a href="chapter9.html"><strong aria-hidden="true">9.</strong> 优化指标和满足指标</a></li><li class="chapter-item expanded "><a href="chapter10.html"><strong aria-hidden="true">10.</strong> 通过开发集和评估标准加速迭代</a></li><li class="chapter-item expanded "><a href="chapter11.html"><strong aria-hidden="true">11.</strong> 何时更改开发/测试集和评估指标</a></li><li class="chapter-item expanded "><a href="chapter12.html"><strong aria-hidden="true">12.</strong> 小结：建立开发集和测试集</a></li><li class="chapter-item expanded "><a href="chapter13.html"><strong aria-hidden="true">13.</strong> 快速构建您的第一个系统，然后迭代</a></li><li class="chapter-item expanded "><a href="chapter14.html"><strong aria-hidden="true">14.</strong> 误差分析：查看开发集样本以评估想法</a></li><li class="chapter-item expanded "><a href="chapter15.html"><strong aria-hidden="true">15.</strong> 在误差分析期间并行评估多个想法</a></li><li class="chapter-item expanded "><a href="chapter16.html"><strong aria-hidden="true">16.</strong> 清理错误标注的开发和测试集样本</a></li><li class="chapter-item expanded "><a href="chapter17.html"><strong aria-hidden="true">17.</strong> 如果你有一个大的开发集，将其分成两个子集，只着眼于其中的一个</a></li><li class="chapter-item expanded "><a href="chapter18.html"><strong aria-hidden="true">18.</strong> Eyeball 和 Blackbox 开发集应该多大？</a></li><li class="chapter-item expanded "><a href="chapter19.html"><strong aria-hidden="true">19.</strong> 小贴士：基本误差分析</a></li><li class="chapter-item expanded "><a href="chapter20.html"><strong aria-hidden="true">20.</strong> 偏差和方差：误差的两大来源</a></li><li class="chapter-item expanded "><a href="chapter21.html"><strong aria-hidden="true">21.</strong> 偏差和方差的例子</a></li><li class="chapter-item expanded "><a href="chapter22.html"><strong aria-hidden="true">22.</strong> 比较最优错误率</a></li><li class="chapter-item expanded "><a href="chapter23.html"><strong aria-hidden="true">23.</strong> 处理偏差和方差</a></li><li class="chapter-item expanded "><a href="chapter24.html"><strong aria-hidden="true">24.</strong> 偏差和方差间的权衡</a></li><li class="chapter-item expanded "><a href="chapter25.html"><strong aria-hidden="true">25.</strong> 减少可避免偏差的方法</a></li><li class="chapter-item expanded "><a href="chapter26.html"><strong aria-hidden="true">26.</strong> 训练集上的误差分析</a></li><li class="chapter-item expanded "><a href="chapter27.html"><strong aria-hidden="true">27.</strong> 减少方差的方法</a></li><li class="chapter-item expanded "><a href="chapter28.html"><strong aria-hidden="true">28.</strong> 诊断偏差和方差：学习曲线</a></li><li class="chapter-item expanded "><a href="chapter29.html"><strong aria-hidden="true">29.</strong> 绘制训练误差曲线</a></li><li class="chapter-item expanded "><a href="chapter30.html"><strong aria-hidden="true">30.</strong> 解读学习曲线：高偏差</a></li><li class="chapter-item expanded "><a href="chapter31.html"><strong aria-hidden="true">31.</strong> 解释学习曲线：其他情况</a></li><li class="chapter-item expanded "><a href="chapter32.html"><strong aria-hidden="true">32.</strong> 绘制学习曲线</a></li><li class="chapter-item expanded "><a href="chapter33.html"><strong aria-hidden="true">33.</strong> 为何我们要与人类水平的表现作对比</a></li><li class="chapter-item expanded "><a href="chapter34.html"><strong aria-hidden="true">34.</strong> 如何定义人类水平的表现</a></li><li class="chapter-item expanded "><a href="chapter35.html"><strong aria-hidden="true">35.</strong> 超越人类水平表现</a></li><li class="chapter-item expanded "><a href="chapter36.html"><strong aria-hidden="true">36.</strong> 何时应该在不同的分布下训练和测试</a></li><li class="chapter-item expanded "><a href="chapter37.html"><strong aria-hidden="true">37.</strong> 如何决定是否使用所有数据</a></li><li class="chapter-item expanded "><a href="chapter38.html"><strong aria-hidden="true">38.</strong> 如何决定是否包含不一致的数据</a></li><li class="chapter-item expanded "><a href="chapter39.html"><strong aria-hidden="true">39.</strong> 加权数据</a></li><li class="chapter-item expanded "><a href="chapter40.html"><strong aria-hidden="true">40.</strong> 从训练集到开发集的泛化</a></li><li class="chapter-item expanded "><a href="chapter41.html"><strong aria-hidden="true">41.</strong> 识别偏差、方差和数据不匹配误差</a></li><li class="chapter-item expanded "><a href="chapter42.html"><strong aria-hidden="true">42.</strong> 处理数据不匹配</a></li><li class="chapter-item expanded "><a href="chapter43.html"><strong aria-hidden="true">43.</strong> 人工数据合成</a></li><li class="chapter-item expanded "><a href="chapter44.html"><strong aria-hidden="true">44.</strong> 优化验证测试</a></li><li class="chapter-item expanded "><a href="chapter45.html"><strong aria-hidden="true">45.</strong> 优化验证集的一般形式</a></li><li class="chapter-item expanded "><a href="chapter46.html" class="active"><strong aria-hidden="true">46.</strong> 强化学习样本</a></li><li class="chapter-item expanded "><a href="chapter47.html"><strong aria-hidden="true">47.</strong> 端到端学习的兴起</a></li><li class="chapter-item expanded "><a href="chapter48.html"><strong aria-hidden="true">48.</strong> 更多端到端学习示例</a></li><li class="chapter-item expanded "><a href="chapter49.html"><strong aria-hidden="true">49.</strong> 端到端学习的优点和缺点</a></li><li class="chapter-item expanded "><a href="chapter50.html"><strong aria-hidden="true">50.</strong> 选择流水线组件：数据可用性</a></li><li class="chapter-item expanded "><a href="chapter51.html"><strong aria-hidden="true">51.</strong> 选择流水线组件：任务简单</a></li><li class="chapter-item expanded "><a href="chapter52.html"><strong aria-hidden="true">52.</strong> 直接学习丰富的输出</a></li><li class="chapter-item expanded "><a href="chapter53.html"><strong aria-hidden="true">53.</strong> 组件错误分析</a></li><li class="chapter-item expanded "><a href="chapter54.html"><strong aria-hidden="true">54.</strong> 将错误归因于某个组件</a></li><li class="chapter-item expanded "><a href="chapter55.html"><strong aria-hidden="true">55.</strong> 错误归因的一般情况</a></li><li class="chapter-item expanded "><a href="chapter56.html"><strong aria-hidden="true">56.</strong> 组件错误分析和与人类水平的对比</a></li><li class="chapter-item expanded "><a href="chapter57.html"><strong aria-hidden="true">57.</strong> 发现有瑕疵的ML流水线</a></li><li class="chapter-item expanded "><a href="chapter58.html"><strong aria-hidden="true">58.</strong> 组建一个超级英雄团队——让你的队友阅读本书</a></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">Machine Learning Yearning</h1>
+
+                    <div class="right-buttons">
+                        <a href="print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h2 id="chapter-46reinforcement-learning-example"><a class="header" href="#chapter-46reinforcement-learning-example">Chapter 46、Reinforcement learning example</a></h2>
+<p><strong>强化学习样本</strong></p>
+<p><img src="img/myl-c46-0.jpg" alt="46" /></p>
+<p>假设你正在使用机器学习去教直升机复杂的演习。 这是计算机控制器直升机在发动机关闭时执行着陆时的延时照片。</p>
+<p>这被称为“自动旋转”演习。即使发动机意外失效，它也允许直升机着陆。人类飞行员将该演习作为他们的训练的一部分。你的目标是使用学习算法通过以安全着陆为结尾的轨迹T飞行直升机。</p>
+<p>为了应用增强学习，你必须开发一个“奖励函数”R(.)，它给一个分数来衡量每个可能的轨迹T有多好。例如，如果T导致直升机坠毁，那么可能奖励是R(T)=-1000——大的负值奖励。导致安全着陆的轨迹T根据其着陆的平滑程度可能导致一个具体的正的R(T)值。通常通过手动选择奖励函数R(.)来量化不同轨迹T的理想程度。它必须权衡着陆时的颠簸程度，直升机是否准确着陆在期望地点，乘客下来的路有多崎岖，等等。设计一个好的奖励函数不简单。</p>
+<p>给定一个奖励函数R(T)，强化学习算法的工作是去控制直升机以便获取 <code>max_T R(T)</code>。然而，强化学习算法产生很多近似值，并且可能不会成功实现它的最大化。</p>
+<p>假设你选择了某个奖励R(.)并运行了你的学习算法。然而，它的表现比人类飞行员要差的远——比起人类飞行员，其着陆颠簸而且看起来不安全。你怎么知道该缺点与增强学习算法有关（算法试图执行一条达到<code>max_T R(T)</code>的轨迹），或者与奖励函数有关（其试图衡量及指定乘坐颠簸和着陆点准确性之间的理想权衡）？</p>
+<p>为了应用优化验证测试，让T_human作为人类飞行员实现的轨迹，T_out作为算法实现的轨迹。根据我们之前的描述，T_human是一条比T_out更好的轨迹。因此，关键测试如下：</p>
+<p>不等式<code>R(T_human) &gt; R(T_out)</code> 是否成立？</p>
+<p>Case 1：如果该不等式成立，那么奖励函数R(.)正确地评估出T_human优于T_out。但我们的强化学习算法找到较差的T_out。这表明致力于提升强化学习算法是值得的。</p>
+<p>Case 2：该不等式不成立：<code>R(T_human) &lt;= R(T_out)</code>。这意味着尽管T_human是更优的轨迹，R(.)仍然为其分配了一个更糟的分数。你应该致力于提升R(.)以更好捕获对应于良好着陆的折衷。</p>
+<p>很多机器学习应用都有这种使用近似搜索算法来优化近似打分函数Score_x(.)的“模式”。有时，没有指定的输入x，所以这只会减少Score(.)。在我们上面的例子中，打分函数就是奖励函数Score(T)=R(T)，优化函数是试图执行良好轨迹T的强化学习算法。</p>
+<p>在该例子和以前例子的一个区别是，与其和“最优”输出进行比较，不如和人类水平的表现T_human进行比较。我们假设T_human是非常好的，即使不是最优的。一般来说，只要你有某个<code>y*</code>（在该例子中是T_human），它是比你当前学习算法表现更好的输出（即使它不是“最优”输出），那么优化验证测试可以指示它是否更有希望提升优化算法或打分函数。</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="chapter45.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next" href="chapter47.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="chapter45.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next" href="chapter47.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+        <!-- Livereload script (if served using the cli tool) -->
+        <script type="text/javascript">
+            var socket = new WebSocket("ws://localhost:3000/__livereload");
+            socket.onmessage = function (event) {
+                if (event.data === "reload") {
+                    socket.close();
+                    location.reload();
+                }
+            };
+
+            window.onbeforeunload = function() {
+                socket.close();
+            }
+        </script>
+
+
+
+        <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="searcher.js" type="text/javascript" charset="utf-8"></script>
+
+        <script src="clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </body>
+</html>
