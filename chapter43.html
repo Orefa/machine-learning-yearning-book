@@ -15,8 +15,8 @@
         <link rel="icon" href="favicon-de23e50b.svg">
         <link rel="shortcut icon" href="favicon-8114d1fc.png">
         <link rel="stylesheet" href="css/variables-8adf115d.css">
-        <link rel="stylesheet" href="css/general-e96d0476.css">
-        <link rel="stylesheet" href="css/chrome-d279d366.css">
+        <link rel="stylesheet" href="css/general-2459343d.css">
+        <link rel="stylesheet" href="css/chrome-ae938929.css">
         <link rel="stylesheet" href="css/print-9e4910d8.css" media="print">
 
         <!-- Fonts -->
@@ -35,10 +35,10 @@
             const path_to_root = "";
             const default_light_theme = "light";
             const default_dark_theme = "navy";
-            window.path_to_searchindex_js = "searchindex-4dd2d852.js";
+            window.path_to_searchindex_js = "searchindex-11cdc27c.js";
         </script>
         <!-- Start loading toc.js asap -->
-        <script src="toc-0198ce5f.js"></script>
+        <script src="toc-dfaf5aa1.js"></script>
     </head>
     <body>
     <div id="mdbook-help-container">
@@ -181,7 +181,7 @@
 <p>更一般的说，在几种情况下，人工数据合成可以让你创造出一个合理匹配开发集的庞大数据集。让我们用猫图检测器作为第二个例子。你注意到开发集图片有更多的运动模糊，因为它们倾向于来自于手机用户，用户在拍照时会轻微移动手机。你可以从互联网图片训练集中得到不模糊的图片，并为它们添加伪造运动模糊，从而使它们和开发集更类似。</p>
 <p>记住人工数据合成有其挑战性：有时候创建对人来说看起来很逼真的合成数据比创建对电脑来说看起来很逼真的数据要容易。例如，假设你有1000小时的语音训练数据，但只有一小时的车噪声。如果你对原始1000小时训练数据的不同部分重复使用同样的这一小时的汽车噪声，你最终得到的合成数据集有着相同的汽车噪声，不断的重复。虽然听这种音频的人可能不能区分（对我们大多数人来说所有的汽车噪声都一样），但学习算法可能会“过拟合”这一个小时的汽车噪声。因此，对于汽车噪声听起来不同的新音频剪辑，算法可能泛化能力较差。</p>
 <p>或者，假设你有1000个独特的汽车噪声小时，但它们全部来自仅10中不同的车。在这种情况下，算法那可能会“过拟合”这些车，如果在不同的汽车音频上测试，表现较差。不幸的是，这些问题很难被发现。</p>
-<p><label class="checkbox-label"><input class="checkbox-img" type="checkbox"><img src="images/myl-c43-0.jpg" alt="43"><span class="img-wrapper"><img src="images/myl-c43-0.jpg" alt="43"></span></label></p>
+<p><img src="images/myl-c43-0.jpg" alt="43"></p>
 <p>再看一个例子，假设你在构建一个识别车的计算机视觉系统。假设你和一个视频游公司合作，该公司拥有一些车的计算机图形模型。为了训练算法那，你使用这些模型生成汽车的合成图像。即使合成图片看起来很逼真，该方法（已被很多人独立提车）可能不会工作的很好。在整个视频游戏中可能有约20辆车设计。构建一个3D的汽车模型成本非常高；如果你在玩游戏，你可能不会注意到你反复看到同样的车，也许只是油漆色不同，也就是说，这些数据看起来对你非常逼真。但是和路上所有车的集合相比（因此你可能会在开发/测试集中看到），这20辆合成的车仅仅是世界汽车分布的一小部分。因此，如果你10W训练样本都来自这20辆车，系统将“过拟合”这20辆特定车的设计，并不能很好的泛化到包括其他车型设计的开发/测试集。</p>
 <p>当合成数据的时，考虑一下你是否真的合成了一组具有代表性的样例。试图避免提供合成数据的属性，使得学习算法可以区分合成和非合成样本，例如如果所有的合成数据都来自20辆车设计中的一个，或所有的合成音频都来自车一个小时的噪声。这建议很难遵循。</p>
 <p>当开展数据合成工作时，我的团队有时在生成数据上会花费数周，生成数据的详细信息足够贴近真实分布的，以便会有显著的影响。但如果你能正确获取细节，你会瞬间获取远比以前大的训练集。</p>
@@ -246,11 +246,11 @@
 
         <script src="elasticlunr-ef4e11c1.min.js"></script>
         <script src="mark-09e88c2c.min.js"></script>
-        <script src="searcher-09f2665d.js"></script>
+        <script src="searcher-c2a407aa.js"></script>
 
         <script src="clipboard-1626706a.min.js"></script>
         <script src="highlight-abc7f01d.js"></script>
-        <script src="book-609e4cb8.js"></script>
+        <script src="book-a0b12cfe.js"></script>
 
         <!-- Custom JS scripts -->
 
