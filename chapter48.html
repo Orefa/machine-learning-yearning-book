@@ -35,7 +35,7 @@
             const path_to_root = "";
             const default_light_theme = "light";
             const default_dark_theme = "navy";
-            window.path_to_searchindex_js = "searchindex-48c0ffb3.js";
+            window.path_to_searchindex_js = "searchindex-77d02601.js";
         </script>
         <!-- Start loading toc.js asap -->
         <script src="toc-0198ce5f.js"></script>
@@ -181,14 +181,14 @@
 <p>这些组件工作如下：</p>
 <ol>
 <li>计算特征：提取手动设计的特征，例如MFCC(梅尔频率倒谱系数)特征，该特征尝试捕获说话的内容同时忽略不太相关的特性，比如说话者的音高。</li>
-<li>音素识别器：一些语言学家认为有基本的声音单元成为“音素”。例如，“keep”中开头的“k”音和“cake”中的“c”音音素相同。该系统试图识别音频剪辑中的音素。</li>
+<li>音素识别器：一些语言学家认为有基本的声音单元称为“音素”。例如，“keep”中开头的“k”音和“cake”中的“c”音音素相同。该系统试图识别音频剪辑中的音素。</li>
 <li>最终识别器：取出识别的音素序列，并尝试将它们串成一个输出转录：</li>
 </ol>
 <p>相反，端到端系统可以输入一个音频剪辑，并试图直接输出转录:</p>
 <p><label class="checkbox-label"><input class="checkbox-img" type="checkbox"><img src="images/myl-c48-1.jpg" alt="48-1"><span class="img-wrapper"><img src="images/myl-c48-1.jpg" alt="48-1"></span></label></p>
 <p>到目前为止，我们只描述了完全线性的机器学习“流水线”：输出从一个阶段顺序传递到下一个阶段。流水线可以更加复杂。例如，这是一个自动驾驶汽车的简单架构：</p>
 <p><label class="checkbox-label"><input class="checkbox-img" type="checkbox"><img src="images/myl-c48-2.jpg" alt="48-2"><span class="img-wrapper"><img src="images/myl-c48-2.jpg" alt="48-2"></span></label></p>
-<p>它有三个组件：一个使用摄像机图像检车其他车辆；一个检测行人；然后最后一个组件为我们自己的汽车规划一条避免汽车和行人路线。</p>
+<p>它有三个组件：一个使用摄像机图像检测其他车辆；一个检测行人；然后最后一个组件为我们的汽车规划出一条避开汽车和行人的路线。</p>
 <p>并非每个流水线中的组件都需要学习。例如，“机器人运动规划”相关文献中有大量关于汽车最终路径规划步骤的算法。这些算法中很多并不涉及学习。</p>
 <p>相反，端到端的方法可能会试图接收传感器输入并直接输出转向方向：</p>
 <p><label class="checkbox-label"><input class="checkbox-img" type="checkbox"><img src="images/myl-c48-3.jpg" alt="48-3"><span class="img-wrapper"><img src="images/myl-c48-3.jpg" alt="48-3"></span></label></p>

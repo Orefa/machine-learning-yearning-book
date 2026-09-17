@@ -35,7 +35,7 @@
             const path_to_root = "";
             const default_light_theme = "light";
             const default_dark_theme = "navy";
-            window.path_to_searchindex_js = "searchindex-48c0ffb3.js";
+            window.path_to_searchindex_js = "searchindex-77d02601.js";
         </script>
         <!-- Start loading toc.js asap -->
         <script src="toc-0198ce5f.js"></script>
@@ -185,7 +185,7 @@
 <li>如果有约100个错误，你将会很清楚主要的错误来源。我见过有人手动分析更多的错误——有时候多达500个。只要你有足够多的数据，这将是无害的。</li>
 </ul>
 <p>假设你的分类器有5%的错误率。为了确保在 Eyeball 开发集中有约100个错误标记的样本，Eyeball 开发集应该有约2000个样本（因为 0.05*2000 = 100）。分类器的错误率越低，为了获得足够多的错误来分析，Eyeball 开发集需要越大。</p>
-<p>如果你正在做一个连人都做不好的任务，那么检查 Eyeball 开发集的联系将不会有什么帮助，因为很难找出算法不能正确分类一个样本的原因。这种情景下，你可能会忽略 Eyeball  开发集。我们将在后续章节中讨论这些问题的指导方针。</p>
+<p>如果你正在做一个连人都做不好的任务，那么检查 Eyeball 开发集的样例将不会有什么帮助，因为很难找出算法不能正确分类一个样本的原因。这种情景下，你可能会忽略 Eyeball  开发集。我们将在后续章节中讨论这些问题的指导方针。</p>
 <p><label class="checkbox-label"><input class="checkbox-img" type="checkbox"><img src="images/myl-c17-1.jpg" alt="0"><span class="img-wrapper"><img src="images/myl-c17-1.jpg" alt="0"></span></label></p>
 <p>Blackbox 开发集该如何？我们之前说过，开发集有约1000-10000个样本是正常的 。为了完善这个表述，尽管更多的数据几乎没什么坏处，一个有1000-10000个样本的 Blackbox 开发集通常会为你提供足够的数据去调超参和选择模型。一个含有100个样本的 Blackbox 开发集比较小，但仍然有用。</p>
 <p>如果你有一个小的开发集，那么你可能没有足够的数据将其分成足够大的 Eyeball 和 Blackbox 开发集来满足他们的目的。相反，你的整个开发集可能不得不用作 Eyeball 开发集——即，你将手动检查所有的开发集数据。</p>

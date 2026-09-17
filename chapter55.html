@@ -35,7 +35,7 @@
             const path_to_root = "";
             const default_light_theme = "light";
             const default_dark_theme = "navy";
-            window.path_to_searchindex_js = "searchindex-48c0ffb3.js";
+            window.path_to_searchindex_js = "searchindex-77d02601.js";
         </script>
         <!-- Start loading toc.js asap -->
         <script src="toc-0198ce5f.js"></script>
@@ -180,22 +180,22 @@
 <p><label class="checkbox-label"><input class="checkbox-img" type="checkbox"><img src="images/myl-c55-0.jpg" alt="图片1"><span class="img-wrapper"><img src="images/myl-c55-0.jpg" alt="图片1"></span></label></p>
 <p>对每个系统在开发集上所犯的错误：</p>
 <ol>
-<li>尝试人为修改A的输出为“完美”输出（例如，猫的“完美”回归框），然后在此输出上运行流水线B和C。如果算法现在给出正确的输出，那表明如果只有A提供更好的输出，整体的算法输出才是正确的；因此，你可以将错误归因于组件A。否者，进行第二步。</li>
-<li>尝试人为修改B的输出为“完美”输出，如果算法现在给出正确的输出，那么将错误归因于组件B。否者，进行第三步。</li>
+<li>尝试人为修改A的输出为“完美”输出（例如，猫的“完美”边界框），然后在此输出上运行流水线B和C。如果算法现在给出正确的输出，那表明如果只有A提供更好的输出，整体的算法输出才是正确的；因此，你可以将错误归因于组件A。否则，进行第二步。</li>
+<li>尝试人为修改B的输出为“完美”输出，如果算法现在给出正确的输出，那么将错误归因于组件B。否则，进行第三步。</li>
 <li>将错误归因于组件C。</li>
 </ol>
 <p>让我们看一个更复杂的例子：</p>
 <p><label class="checkbox-label"><input class="checkbox-img" type="checkbox"><img src="images/myl-c55-1.jpg" alt="图片2"><span class="img-wrapper"><img src="images/myl-c55-1.jpg" alt="图片2"></span></label></p>
-<p>自动驾驶汽车使用该流水线。你如何按步执行错误分析来决定应该专注于哪个组件？</p>
+<p>自动驾驶汽车使用该流水线。你如何通过错误分析来确定应该专注哪些组件？</p>
 <p>你可以将这三个组件按如下方式映射为A,B,C：</p>
 <ul>
 <li>A: Detect cars</li>
 <li>B: Detect pedestrians</li>
 <li>C: Plan path for car</li>
 </ul>
-<p>按照上述程序，假设你在一个封闭的轨道上测试你的汽车，发现一个案例，汽车选择了比熟练的司机更加刺耳的转向方向。在自动驾驶的世界中，该案例通常被称为<strong>场景</strong>。然后你可以：</p>
+<p>按照上述程序，假设你在一个封闭的轨道上测试你的汽车，发现一个案例，汽车选择了比熟练的司机更加突兀的转向方向。在自动驾驶的世界中，该案例通常被称为<strong>场景</strong>。然后你可以：</p>
 <ol>
-<li>尝试人为修改A（检测汽车）的输出为“完美”输出（例如，人为介入并告诉它其他车的位置）。和往常一样运行剩下的流水线B、C，但允许C（路径规划）使用现在A的完美输出。如果算法现在为汽车规划了一条更好的路径，那表明，如果只有A提供更好的输出，整体算法的输出才会更好；因此，你可以将错误归因于组件A。否则，继续第2步。</li>
+<li>尝试人为修改A（检测汽车）的输出为“完美”输出（例如，人为介入并告诉它其他车的位置）。和往常一样运行剩下的流水线B、C，但允许C（路径规划）使用现在A的完美输出。如果算法现在为汽车规划了一条好得多的路径，那就表明，只要A提供更好的输出，整体算法的输出就会更好；因此，你可以将错误归因于组件A。否则，继续第2步。</li>
 <li>尝试人为修改B（行人检测）的输出为“完美”输出。如果算法现在给出了正确的输出，那么将错误归因于组件B。否则，继续第3步。</li>
 <li>将错误归因于组件C。</li>
 </ol>
@@ -205,7 +205,7 @@
 <li>B: Detect cars (was previously  Detect pedestrians)</li>
 <li>C: Plan path for car</li>
 </ul>
-<p>但是该结果分析仍然有效，并可以很好的指导你该注意哪里。</p>
+<p>但是该分析的结果仍然有效，并可以很好的指导你该注意哪里。</p>
 
                     </main>
 

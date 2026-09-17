@@ -35,7 +35,7 @@
             const path_to_root = "";
             const default_light_theme = "light";
             const default_dark_theme = "navy";
-            window.path_to_searchindex_js = "searchindex-48c0ffb3.js";
+            window.path_to_searchindex_js = "searchindex-77d02601.js";
         </script>
         <!-- Start loading toc.js asap -->
         <script src="toc-0198ce5f.js"></script>
@@ -181,10 +181,10 @@
 <p><label class="checkbox-label"><input class="checkbox-img" type="checkbox"><img src="images/myl-c8-0.jpg" alt="这里写图片描述"><span class="img-wrapper"><img src="images/myl-c8-0.jpg" alt="这里写图片描述"></span></label></p>
 <p>如上所示，两个分类器都没有显而易见地比另一个更好，所以它不能立即引导你选择其中一个。</p>
 <p>在开发期间，你的团队会尝试大量关于算法架构、模型参数、特征选择等方面的想法。使用<strong>单一数字的评估指标（single-number evaluation metric）</strong>（如精度）使得你可以根据其在该指标上的表现快速对所有模型进行排序，从而快速决定哪一个是能工作得最好的。</p>
-<p>如果你真的即关心查准率（Precision）又关心查全率（Recall），我推荐使用一种标准方法将它们组合成一个单一的数字。例如，可以取Precision和Recall的平均值，最终得到单个数字。或者，你可以计算“F1度量（F1 score）”，这是一种基于其平均值改善的方法，比简单地取平均值效果要好。【4】 </p>
+<p>如果你真的既关心查准率（Precision）又关心查全率（Recall），我推荐使用一种标准方法将它们组合成一个单一的数字。例如，可以取Precision和Recall的平均值，最终得到单个数字。或者，你可以计算“F1度量（F1 score）”，这是一种基于其平均值改善的方法，比简单地取平均值效果要好。【4】 </p>
 <p><label class="checkbox-label"><input class="checkbox-img" type="checkbox"><img src="images/myl-c8-1.jpg" alt="这里写图片描述"><span class="img-wrapper"><img src="images/myl-c8-1.jpg" alt="这里写图片描述"></span></label></p>
-<p>当你面在大量的分类器中进行选择时，使用单一数字的评估指标可以加快你做出决策的能力。所有这些都给出了明确的表现排名，从而给出一个清晰的前进方向。</p>
-<p>作为最后一个例子，假如你分别得在四个主要市场（（i）美国，（ii）中国，（iii）印度和（iv）其他地区）跟踪猫分类器的准确率。这里提供了四个指标。通过对这四个数据进行平均或加权平均，最终得到一个单一数字度量。取平均值或加权平均值是将多个指标合并为一个的最常见的方法之一。</p>
+<p>当你在大量的分类器中进行选择时，使用单一数字的评估指标可以加快你做出决策的能力。所有这些都给出了明确的表现排名，从而给出一个清晰的前进方向。</p>
+<p>作为最后一个例子，假如你分别在四个主要市场（（i）美国，（ii）中国，（iii）印度和（iv）其他地区）跟踪猫分类器的准确率。这里提供了四个指标。通过对这四个数据进行平均或加权平均，最终得到一个单一数字度量。取平均值或加权平均值是将多个指标合并为一个的最常见的方法之一。</p>
 <p>———————————————————— </p>
 <p>【3】 猫的分类器的查准率（Precision）是指在开发集（或测试集）中检测出的所有有猫的图片中有多少比例是真正的有猫。它的查全率（Recall）指在开发集（或测试集）中所有真正有猫的图片有多少比例被检测出来了。在高查准率和高查全率之间通常存在权衡。</p>
 <p>【4】 如果你想要了解更多关于F1度量（F1 score）的信息，请参阅<a href="https://en.wikipedia.org/wiki/F1_score">https://en.wikipedia.org/wiki/F1_score</a> 。它是基于Precision和Recall的”调和平均（harmonic mean）”定义的，其计算公式为2/((1/Precision)+(1/Recall))。</p>

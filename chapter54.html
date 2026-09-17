@@ -35,7 +35,7 @@
             const path_to_root = "";
             const default_light_theme = "light";
             const default_dark_theme = "navy";
-            window.path_to_searchindex_js = "searchindex-48c0ffb3.js";
+            window.path_to_searchindex_js = "searchindex-77d02601.js";
         </script>
         <!-- Start loading toc.js asap -->
         <script src="toc-0198ce5f.js"></script>
@@ -182,8 +182,8 @@
 <p><label class="checkbox-label"><input class="checkbox-img" type="checkbox"><img src="images/myl-c54-1.jpg" alt="图片2"><span class="img-wrapper"><img src="images/myl-c54-1.jpg" alt="图片2"></span></label></p>
 <p>因此猫种类分类器被给予如下裁剪图片，于是其错误地输出y=0，即图片里没有猫。</p>
 <p><label class="checkbox-label"><input class="checkbox-img" type="checkbox"><img src="images/myl-c54-2.jpg" alt="图片3"><span class="img-wrapper"><img src="images/myl-c54-2.jpg" alt="图片3"></span></label></p>
-<p>猫检测器做的很差。然而，技术娴熟的人仍可以从如此差的裁剪图片中识别出暹罗猫。所以我们应该将该错误归因于猫检测器，还是猫种类分类器，还是归因于两者？答案是模棱两可的。</p>
-<p>如果像这些模棱两可的样例数量较小，你可以做任何想你想做的决定并得到类似的结果。但这里有一个更正式的测试，它可以让你更明确地将错误归因于某个组件。</p>
+<p>猫检测器做得很差。然而，技术娴熟的人仍可以从如此差的裁剪图片中识别出暹罗猫。所以我们应该将该错误归因于猫检测器，还是猫种类分类器，还是归因于两者？答案是模棱两可的。</p>
+<p>如果像这些模棱两可的样例数量较小，你可以做任何你想做的决定并得到类似的结果。但这里有一个更正式的测试，它可以让你更明确地将错误归因于恰好一个组件。</p>
 <ol>
 <li>用手工标注的边界框替代猫检测器的输出。</li>
 </ol>
@@ -193,13 +193,10 @@
 </ol>
 <p>换句话说，进行一项试验，实验中给猫种类分类器提供一个“完美的”输入。有两种情况：</p>
 <ul>
-<li>case 1: 即使提供了“完美的”边界框，猫种类分类器仍错误地输出y=0。这种情况下，很明显猫种类分类器是错的。</li>
-<li>case 2: 提供一个“完美的”边界框，猫种类分类器现在可以正确输出y=1。这表明如果只有猫检测器提供一个更完美的边界框，那么整个系统的输出才是正确的。因此，将错误归因于猫检测器。</li>
+<li>情况1: 即使提供了“完美的”边界框，猫种类分类器仍错误地输出y=0。这种情况下，很明显猫种类分类器是错的。</li>
+<li>情况2: 提供一个“完美的”边界框，猫种类分类器现在可以正确输出y=1。这表明如果只有猫检测器提供一个更完美的边界框，那么整个系统的输出才是正确的。因此，将错误归因于猫检测器。</li>
 </ul>
-<p>通过在错误分类的开发集图片上执行该分析，你现在可以明确地将每一个错误归因于一个组件。这允许你评估由于流水线中每个组件引起的错误分数，因此决定在哪儿集中注意力。</p>
-<ol start="2">
-<li></li>
-</ol>
+<p>通过在错误分类的开发集图片上执行该分析，你现在可以明确地将每一个错误归因于一个组件。这允许你估计由流水线中每个组件引起的错误占比，从而决定将注意力集中在哪儿。</p>
 
                     </main>
 
