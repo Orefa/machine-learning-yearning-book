@@ -15,8 +15,8 @@
         <link rel="icon" href="favicon-de23e50b.svg">
         <link rel="shortcut icon" href="favicon-8114d1fc.png">
         <link rel="stylesheet" href="css/variables-8adf115d.css">
-        <link rel="stylesheet" href="css/general-2459343d.css">
-        <link rel="stylesheet" href="css/chrome-ae938929.css">
+        <link rel="stylesheet" href="css/general-e96d0476.css">
+        <link rel="stylesheet" href="css/chrome-d279d366.css">
         <link rel="stylesheet" href="css/print-9e4910d8.css" media="print">
 
         <!-- Fonts -->
@@ -35,10 +35,10 @@
             const path_to_root = "";
             const default_light_theme = "light";
             const default_dark_theme = "navy";
-            window.path_to_searchindex_js = "searchindex-11cdc27c.js";
+            window.path_to_searchindex_js = "searchindex-689c00d2.js";
         </script>
         <!-- Start loading toc.js asap -->
-        <script src="toc-dfaf5aa1.js"></script>
+        <script src="toc-0198ce5f.js"></script>
     </head>
     <body>
     <div id="mdbook-help-container">
@@ -178,17 +178,17 @@
 <p><strong>组件错误分析</strong></p>
 <p>假设你的系统是使用复杂的机器学习流水线构建的，并且你想提高系统的性能，你该致力于改进流水线中的哪个组件呢？通过将错误归因于流水线的特定组件，你可以决定如何确定工作的优先级。</p>
 <p>让我们使用暹罗猫分类器的例子：</p>
-<p><img src="images/myl-c53-0.jpg" alt="图片1"></p>
+<p><label class="checkbox-label"><input class="checkbox-img" type="checkbox"><img src="images/myl-c53-0.jpg" alt="图片1"><span class="img-wrapper"><img src="images/myl-c53-0.jpg" alt="图片1"></span></label></p>
 <p>第一个组件，猫检测器，从图片中检测出猫并裁剪出来。第二个组件，猫种类分类器，决定它是否是暹罗猫。改进流水线中的这两个组件中的任何一个可能需要花费数年的时间。如何决定应该专注于哪个/些组件？</p>
 <p>通过执行组件错误分析，你可以尝试将算法犯的每个错误归因于流水线中的两个组件中的一个（有时候是两个）。例如，尽管正确的label是y=1，但算法却错误的将这张照片分类为不包含暹罗猫（y=0）。</p>
-<p><img src="images/myl-c53-1.jpg" alt="图片2"></p>
+<p><label class="checkbox-label"><input class="checkbox-img" type="checkbox"><img src="images/myl-c53-1.jpg" alt="图片2"><span class="img-wrapper"><img src="images/myl-c53-1.jpg" alt="图片2"></span></label></p>
 <p>让我们手动检查算法的这两步做了什么。假设暹罗猫检测器检测出的猫如下：</p>
-<p><img src="images/myl-c53-2.jpg" alt="图片3"></p>
+<p><label class="checkbox-label"><input class="checkbox-img" type="checkbox"><img src="images/myl-c53-2.jpg" alt="图片3"><span class="img-wrapper"><img src="images/myl-c53-2.jpg" alt="图片3"></span></label></p>
 <p>这意味着提供给猫种类分类器的是如下图片：</p>
-<p><img src="images/myl-c53-3.jpg" alt="图片4"></p>
+<p><label class="checkbox-label"><input class="checkbox-img" type="checkbox"><img src="images/myl-c53-3.jpg" alt="图片4"><span class="img-wrapper"><img src="images/myl-c53-3.jpg" alt="图片4"></span></label></p>
 <p>然后猫种类分类器将该图片正确地分类为不包含暹罗猫。因此，猫种类分类器是无可指责的：提供一堆石头的照片并输出非常合理的label y=0。确实，人对上面的裁剪图片进行分类也会预测y=0。因此，你可以清楚地将该错误归因于猫检测器。</p>
 <p>另一方面，如果猫检测器输出如下方框：</p>
-<p><img src="images/myl-c53-4.jpg" alt="图片5"></p>
+<p><label class="checkbox-label"><input class="checkbox-img" type="checkbox"><img src="images/myl-c53-4.jpg" alt="图片5"><span class="img-wrapper"><img src="images/myl-c53-4.jpg" alt="图片5"></span></label></p>
 <p>那么你会得出这样的结论：猫检测器已完成其工作，猫种类分类器有问题。</p>
 <p>假如你仔细检查了开发集中100个错误分类的图片，并发现90个错误归因于猫检测器，只有10个错误归因于猫分类器。你可以安全地得出结论：你应该更专注于改进猫检测器。</p>
 <p>此外，你现在还可以方便地找到90个猫检测器输出不正确方框的样本。你可以使用这90个样本对猫检测器进行更深层次的错误分析，以了解如何改进它。</p>
@@ -254,11 +254,11 @@
 
         <script src="elasticlunr-ef4e11c1.min.js"></script>
         <script src="mark-09e88c2c.min.js"></script>
-        <script src="searcher-c2a407aa.js"></script>
+        <script src="searcher-09f2665d.js"></script>
 
         <script src="clipboard-1626706a.min.js"></script>
         <script src="highlight-abc7f01d.js"></script>
-        <script src="book-a0b12cfe.js"></script>
+        <script src="book-609e4cb8.js"></script>
 
         <!-- Custom JS scripts -->
 

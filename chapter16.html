@@ -15,8 +15,8 @@
         <link rel="icon" href="favicon-de23e50b.svg">
         <link rel="shortcut icon" href="favicon-8114d1fc.png">
         <link rel="stylesheet" href="css/variables-8adf115d.css">
-        <link rel="stylesheet" href="css/general-2459343d.css">
-        <link rel="stylesheet" href="css/chrome-ae938929.css">
+        <link rel="stylesheet" href="css/general-e96d0476.css">
+        <link rel="stylesheet" href="css/chrome-d279d366.css">
         <link rel="stylesheet" href="css/print-9e4910d8.css" media="print">
 
         <!-- Fonts -->
@@ -35,10 +35,10 @@
             const path_to_root = "";
             const default_light_theme = "light";
             const default_dark_theme = "navy";
-            window.path_to_searchindex_js = "searchindex-11cdc27c.js";
+            window.path_to_searchindex_js = "searchindex-689c00d2.js";
         </script>
         <!-- Start loading toc.js asap -->
-        <script src="toc-dfaf5aa1.js"></script>
+        <script src="toc-0198ce5f.js"></script>
     </head>
     <body>
     <div id="mdbook-help-container">
@@ -177,7 +177,7 @@
                         <h2 id="chapter-16cleaning-up-mislabeled-dev-and-test-set-examples"><a class="header" href="#chapter-16cleaning-up-mislabeled-dev-and-test-set-examples">Chapter 16、Cleaning up mislabeled dev and test set examples</a></h2>
 <p><strong>清理错误标注的开发和测试集样本</strong></p>
 <p>在错误分析期间，你可能会注意到开发集中的一些样本被错误标记（mislabeled）。当我说“mislabeled”时，我的意思是即使在算法遇到它之前，图片已经被打标人员贴上了错误的标签。即，样本 (x,y) 中的类别标签y的值不正确。例如，也许一些不是猫的图片被错贴标签为包含猫，反之亦然。如果你推测一小部分错误标注的图片很重要，那么添加一个类别以跟踪这一小部分错误标注的样本：</p>
-<p><img src="images/myl-c16-0.jpg" alt="16"></p>
+<p><label class="checkbox-label"><input class="checkbox-img" type="checkbox"><img src="images/myl-c16-0.jpg" alt="16"><span class="img-wrapper"><img src="images/myl-c16-0.jpg" alt="16"></span></label></p>
 <p>你应该纠正开发集中的标签吗？记住，开发集的目的是为了帮你快速评估算法，以便你可以判断算法A或B谁更好。如果被错误标注的开发集的一小部分妨碍你做出这些判断的能力，那么花时间去修正错误标注的开发集标签是值得的。</p>
 <p>例如，假设你的分类器表现如下：</p>
 <ul>
@@ -258,11 +258,11 @@
 
         <script src="elasticlunr-ef4e11c1.min.js"></script>
         <script src="mark-09e88c2c.min.js"></script>
-        <script src="searcher-c2a407aa.js"></script>
+        <script src="searcher-09f2665d.js"></script>
 
         <script src="clipboard-1626706a.min.js"></script>
         <script src="highlight-abc7f01d.js"></script>
-        <script src="book-a0b12cfe.js"></script>
+        <script src="book-609e4cb8.js"></script>
 
         <!-- Custom JS scripts -->
 

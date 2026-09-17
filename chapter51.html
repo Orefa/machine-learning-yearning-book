@@ -15,8 +15,8 @@
         <link rel="icon" href="favicon-de23e50b.svg">
         <link rel="shortcut icon" href="favicon-8114d1fc.png">
         <link rel="stylesheet" href="css/variables-8adf115d.css">
-        <link rel="stylesheet" href="css/general-2459343d.css">
-        <link rel="stylesheet" href="css/chrome-ae938929.css">
+        <link rel="stylesheet" href="css/general-e96d0476.css">
+        <link rel="stylesheet" href="css/chrome-d279d366.css">
         <link rel="stylesheet" href="css/print-9e4910d8.css" media="print">
 
         <!-- Fonts -->
@@ -35,10 +35,10 @@
             const path_to_root = "";
             const default_light_theme = "light";
             const default_dark_theme = "navy";
-            window.path_to_searchindex_js = "searchindex-11cdc27c.js";
+            window.path_to_searchindex_js = "searchindex-689c00d2.js";
         </script>
         <!-- Start loading toc.js asap -->
-        <script src="toc-dfaf5aa1.js"></script>
+        <script src="toc-0198ce5f.js"></script>
     </head>
     <body>
     <div id="mdbook-help-container">
@@ -177,7 +177,7 @@
                         <h2 id="chapter-51choosing-pipeline-components-task-simplicity"><a class="header" href="#chapter-51choosing-pipeline-components-task-simplicity">Chapter 51、Choosing pipeline components: Task simplicity</a></h2>
 <p><strong>选择流水线组件：任务简单</strong></p>
 <p>除了数据可用性以外，当选择一个流水线的组件时，你还应该考虑第二个因素：各个组件解决的问题有多简单？你应该尝试选择易于构建和学习的流水线组件。但一个组件“易于”学习意味着什么？</p>
-<p><img src="images/myl-c51-0.jpg" alt="51-0"></p>
+<p><label class="checkbox-label"><input class="checkbox-img" type="checkbox"><img src="images/myl-c51-0.jpg" alt="51-0"><span class="img-wrapper"><img src="images/myl-c51-0.jpg" alt="51-0"></span></label></p>
 <p>考虑这些机器学习任务，按难度递增的顺序罗列如下：</p>
 <ol>
 <li>分类图像是否过度曝光（如上例所示）</li>
@@ -189,18 +189,18 @@
 <p>这些中的每一都是一个二进制图像分类任务：你必须输入一张图像，输出为0或1。但列表中较早的任务让一个神经网络来学习似乎太“更简单”。你将可以用更少的训练样本来学习更简单的任务。</p>
 <p>机器学习没有很好的正式定义什么使任务变得容易或困难【1】。随着深度学习和多层神经网络的兴起，我们有时会说，如果一个任务可以以更少的计算步骤（对应于浅层神经网络）执行，那么该任务是“简单的”，如果一个任务需要更多计算步骤（需要更深的神经网络），那该任务是“困难的”。但这些都是非正式的定义。</p>
 <p>如果你能够执行复杂的任务，并将其分解成简单的子任务，那么通过明确地编写子任务的步骤，你正在为算法提供先验知识，以帮助其更有效的学习任务。</p>
-<p><img src="images/myl-c51-1.jpg" alt="51-1"></p>
+<p><label class="checkbox-label"><input class="checkbox-img" type="checkbox"><img src="images/myl-c51-1.jpg" alt="51-1"><span class="img-wrapper"><img src="images/myl-c51-1.jpg" alt="51-1"></span></label></p>
 <p>假设你正在构建一个暹罗猫检测器。这是纯粹的端到端架构：</p>
-<p><img src="images/myl-c51-2.jpg" alt="51-2"></p>
+<p><label class="checkbox-label"><input class="checkbox-img" type="checkbox"><img src="images/myl-c51-2.jpg" alt="51-2"><span class="img-wrapper"><img src="images/myl-c51-2.jpg" alt="51-2"></span></label></p>
 <p>相比之下，你可以使用有两个步骤的流水线架构：</p>
-<p><img src="images/myl-c51-3.jpg" alt="51-3"></p>
+<p><label class="checkbox-label"><input class="checkbox-img" type="checkbox"><img src="images/myl-c51-3.jpg" alt="51-3"><span class="img-wrapper"><img src="images/myl-c51-3.jpg" alt="51-3"></span></label></p>
 <p>第一个步（猫检测器）检测图片中所有的猫。</p>
-<p><img src="images/myl-c51-4.jpg" alt="51-4"></p>
+<p><label class="checkbox-label"><input class="checkbox-img" type="checkbox"><img src="images/myl-c51-4.jpg" alt="51-4"><span class="img-wrapper"><img src="images/myl-c51-4.jpg" alt="51-4"></span></label></p>
 <p>第二步将每个检测出的猫（一次一个）的裁剪图像传入猫种类分类器，如果检测出的猫是暹罗猫，那么最终输出为1。</p>
-<p><img src="images/myl-c51-5.jpg" alt="51-5"></p>
+<p><label class="checkbox-label"><input class="checkbox-img" type="checkbox"><img src="images/myl-c51-5.jpg" alt="51-5"><span class="img-wrapper"><img src="images/myl-c51-5.jpg" alt="51-5"></span></label></p>
 <p>相比仅使用标签0/1训练一个纯粹的端到端分类器，流水线中两个组件的每一个（猫检测器和猫品种分类器）似乎更容易学习并且将需要更少的数据【2】。</p>
 <p>作为最后一个例子，让我们再来看看自动驾驶流水线。</p>
-<p><img src="images/myl-c51-6.jpg" alt="51-6"></p>
+<p><label class="checkbox-label"><input class="checkbox-img" type="checkbox"><img src="images/myl-c51-6.jpg" alt="51-6"><span class="img-wrapper"><img src="images/myl-c51-6.jpg" alt="51-6"></span></label></p>
 <p>通过使用该流水线，你告诉算法驾驶有3个关键的步骤：(1)检测其他汽车，(2)检测行人，和(3)为你的车规划路线。此外，相对于纯粹的端到端学习方法，这些步骤中的每一个都是相对简单的功能（因此可以使用更少的数据学习）。</p>
 <p>总之，在决定流水线中的组件应该是什么时，尝试构建一个流水线，其每个组件功能相对“简单”，因此可以只需从适量的数据中学习。</p>
 <p>————————</p>
@@ -267,11 +267,11 @@
 
         <script src="elasticlunr-ef4e11c1.min.js"></script>
         <script src="mark-09e88c2c.min.js"></script>
-        <script src="searcher-c2a407aa.js"></script>
+        <script src="searcher-09f2665d.js"></script>
 
         <script src="clipboard-1626706a.min.js"></script>
         <script src="highlight-abc7f01d.js"></script>
-        <script src="book-a0b12cfe.js"></script>
+        <script src="book-609e4cb8.js"></script>
 
         <!-- Custom JS scripts -->
 

@@ -15,8 +15,8 @@
         <link rel="icon" href="favicon-de23e50b.svg">
         <link rel="shortcut icon" href="favicon-8114d1fc.png">
         <link rel="stylesheet" href="css/variables-8adf115d.css">
-        <link rel="stylesheet" href="css/general-2459343d.css">
-        <link rel="stylesheet" href="css/chrome-ae938929.css">
+        <link rel="stylesheet" href="css/general-e96d0476.css">
+        <link rel="stylesheet" href="css/chrome-d279d366.css">
         <link rel="stylesheet" href="css/print-9e4910d8.css" media="print">
 
         <!-- Fonts -->
@@ -35,10 +35,10 @@
             const path_to_root = "";
             const default_light_theme = "light";
             const default_dark_theme = "navy";
-            window.path_to_searchindex_js = "searchindex-11cdc27c.js";
+            window.path_to_searchindex_js = "searchindex-689c00d2.js";
         </script>
         <!-- Start loading toc.js asap -->
-        <script src="toc-dfaf5aa1.js"></script>
+        <script src="toc-0198ce5f.js"></script>
     </head>
     <body>
     <div id="mdbook-help-container">
@@ -177,7 +177,7 @@
                         <h2 id="chapter-49pros-and-cons-of-end-to-end-learning"><a class="header" href="#chapter-49pros-and-cons-of-end-to-end-learning">Chapter 49、Pros and cons of end-to-end learning</a></h2>
 <p><strong>端到端学习的优点和缺点</strong></p>
 <p>考虑我们前面例子中相同的语音流水线：</p>
-<p><img src="images/myl-c49-0.jpg" alt="49-0"></p>
+<p><label class="checkbox-label"><input class="checkbox-img" type="checkbox"><img src="images/myl-c49-0.jpg" alt="49-0"><span class="img-wrapper"><img src="images/myl-c49-0.jpg" alt="49-0"></span></label></p>
 <p>该流水线的很多部分是“手工设计”的：</p>
 <ul>
 <li>MFCCs是一个手工设计的音频特征的集合。尽管它们提供了一个音频输入的合理总结，它们也通过丢弃一些信息来简化输入信号。</li>
@@ -190,7 +190,7 @@
 </ul>
 <p>拥有更多手工设计的组件通常可以让语音系统以更少的数据学习。通过MFCCs捕获的手工设计的知识，以及音素“补充”的学习算法从数据中获取的知识。当我们没有太多数据时，这些知识是有用的。</p>
 <p>现在，考虑端到端系统：</p>
-<p><img src="images/myl-c49-1.jpg" alt="49-1"></p>
+<p><label class="checkbox-label"><input class="checkbox-img" type="checkbox"><img src="images/myl-c49-1.jpg" alt="49-1"><span class="img-wrapper"><img src="images/myl-c49-1.jpg" alt="49-1"></span></label></p>
 <p>该系统缺乏手工设计的知识。因此，当训练集很小时，它可能比手工设计的流水线要差。</p>
 <p>但当训练集很大时， 那么它不会受到MFCC或基于音素表示的局限性的阻碍。如果学习算法是一个足够大的神经网络，并且训练数据足够多，那么它就有可能做的很好，甚至可能达到最优错误率。</p>
 <p>当“两端”（输入端和输出端）都有很多标注数据时，端到端学习系统将表现良好。在该样例中，我们需要一个&lt;音频，转录&gt;对的大数据集。当该类型数据不可用时，请谨慎使用端到端学习方式处理。</p>
@@ -257,11 +257,11 @@
 
         <script src="elasticlunr-ef4e11c1.min.js"></script>
         <script src="mark-09e88c2c.min.js"></script>
-        <script src="searcher-c2a407aa.js"></script>
+        <script src="searcher-09f2665d.js"></script>
 
         <script src="clipboard-1626706a.min.js"></script>
         <script src="highlight-abc7f01d.js"></script>
-        <script src="book-a0b12cfe.js"></script>
+        <script src="book-609e4cb8.js"></script>
 
         <!-- Custom JS scripts -->
 

@@ -15,8 +15,8 @@
         <link rel="icon" href="favicon-de23e50b.svg">
         <link rel="shortcut icon" href="favicon-8114d1fc.png">
         <link rel="stylesheet" href="css/variables-8adf115d.css">
-        <link rel="stylesheet" href="css/general-2459343d.css">
-        <link rel="stylesheet" href="css/chrome-ae938929.css">
+        <link rel="stylesheet" href="css/general-e96d0476.css">
+        <link rel="stylesheet" href="css/chrome-d279d366.css">
         <link rel="stylesheet" href="css/print-9e4910d8.css" media="print">
 
         <!-- Fonts -->
@@ -35,10 +35,10 @@
             const path_to_root = "";
             const default_light_theme = "light";
             const default_dark_theme = "navy";
-            window.path_to_searchindex_js = "searchindex-11cdc27c.js";
+            window.path_to_searchindex_js = "searchindex-689c00d2.js";
         </script>
         <!-- Start loading toc.js asap -->
-        <script src="toc-dfaf5aa1.js"></script>
+        <script src="toc-0198ce5f.js"></script>
     </head>
     <body>
     <div id="mdbook-help-container">
@@ -180,7 +180,7 @@
 <p>假设<code>y*</code>是“正确的”输出，但算法输出y_out。那么关键测试是测量是否Score_x(<code>y*</code>) &gt; Score_x(y_out)。如果该不等式成立，那么我们会将错误归咎于优化算法。参考前一章以确保你理解其背后的逻辑。否则，我们将归咎于Score_x(y)的计算。</p>
 <p>让我们再看一个例子。假设你正在构建一个中译英的机器翻译系统。系统通过输入中文句子C，并为每个可能的翻译E计算Score_c(E)。例如，你可能使用Score_c(E)=P(E|C)，给定输入语句C，翻译为E的概率。</p>
 <p>你的算法通过尝试如下计算来翻译句子：</p>
-<p><img src="images/myl-c45-0.jpg" alt="45"></p>
+<p><label class="checkbox-label"><input class="checkbox-img" type="checkbox"><img src="images/myl-c45-0.jpg" alt="45"><span class="img-wrapper"><img src="images/myl-c45-0.jpg" alt="45"></span></label></p>
 <p>然而，所有可能的英语语句E的集合太大了，所以你依靠启发式搜索算法。</p>
 <p>假设你的算法输出错误的翻译E_out，而不是正确的翻译<code>E*</code>。那么优化验证测试将要求你计算是否Score_c(<code>E*</code>) &gt; Score_c(E_out)。如果该不等式成立，那么Score_c(.)正确地将<code>E*</code>识别为比E_out更好的输出；因此，你会将此错误归咎于近似搜索算法。否则，你将此错误归咎于Score_c(.)的计算。</p>
 <p>这是AI中一个非常常见的“设计模式”，首先学习一个近似打分函数Score_x(.)，然后使用一个近似最大化算法。如果你能够发现该模式，那么你将能够使用优化验证测试来了解您的错误来源。</p>
@@ -245,11 +245,11 @@
 
         <script src="elasticlunr-ef4e11c1.min.js"></script>
         <script src="mark-09e88c2c.min.js"></script>
-        <script src="searcher-c2a407aa.js"></script>
+        <script src="searcher-09f2665d.js"></script>
 
         <script src="clipboard-1626706a.min.js"></script>
         <script src="highlight-abc7f01d.js"></script>
-        <script src="book-a0b12cfe.js"></script>
+        <script src="book-609e4cb8.js"></script>
 
         <!-- Custom JS scripts -->
 

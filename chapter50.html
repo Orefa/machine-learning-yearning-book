@@ -15,8 +15,8 @@
         <link rel="icon" href="favicon-de23e50b.svg">
         <link rel="shortcut icon" href="favicon-8114d1fc.png">
         <link rel="stylesheet" href="css/variables-8adf115d.css">
-        <link rel="stylesheet" href="css/general-2459343d.css">
-        <link rel="stylesheet" href="css/chrome-ae938929.css">
+        <link rel="stylesheet" href="css/general-e96d0476.css">
+        <link rel="stylesheet" href="css/chrome-d279d366.css">
         <link rel="stylesheet" href="css/print-9e4910d8.css" media="print">
 
         <!-- Fonts -->
@@ -35,10 +35,10 @@
             const path_to_root = "";
             const default_light_theme = "light";
             const default_dark_theme = "navy";
-            window.path_to_searchindex_js = "searchindex-11cdc27c.js";
+            window.path_to_searchindex_js = "searchindex-689c00d2.js";
         </script>
         <!-- Start loading toc.js asap -->
-        <script src="toc-dfaf5aa1.js"></script>
+        <script src="toc-0198ce5f.js"></script>
     </head>
     <body>
     <div id="mdbook-help-container">
@@ -178,10 +178,10 @@
 <p><strong>选择流水线组件：数据可用性</strong></p>
 <p>当构建一个非端到端的流水线系统时，对于流水线的组件来说什么是最好的选择呢？如何设计流水线将极大影响整个系统的性能。一个重要的因素是你是否可以容易地收集数据来训练每个组件。</p>
 <p>例如，考虑如这种自动驾驶架构：</p>
-<p><img src="images/myl-c50-0.jpg" alt="50-0"></p>
+<p><label class="checkbox-label"><input class="checkbox-img" type="checkbox"><img src="images/myl-c50-0.jpg" alt="50-0"><span class="img-wrapper"><img src="images/myl-c50-0.jpg" alt="50-0"></span></label></p>
 <p>你可以使用机器学习来检测汽车和行人。而且，获取这些数据并不难：有很多计算机视觉数据集，它们有大量标注的汽车和行人。你也可以使用众包（例如亚马逊土耳其机器人）来获取更大的数据集。因此获取训练数据来构建一个汽车检测器和行人检测器相对容易。</p>
 <p>相反，考虑一个纯粹的端到端方法：</p>
-<p><img src="images/myl-c50-1.jpg" alt="50-1"></p>
+<p><label class="checkbox-label"><input class="checkbox-img" type="checkbox"><img src="images/myl-c50-1.jpg" alt="50-1"><span class="img-wrapper"><img src="images/myl-c50-1.jpg" alt="50-1"></span></label></p>
 <p>为了训练该系统，我们需要一个大的（图片，转向方向）对数据集。收集该数据需要人们开车并记录他们的转向方向，这很耗时而且很贵。你需要一个特殊装备的车队，以及大量的驾驶来涵盖各种可能的情况。这使端到端系统很难训练。获取已标注汽车和行人的大型数据集要容易的多。</p>
 <p>更为一般的说，如果有很多数据可用于训练一个流水线（例如汽车检测器或行人检测器）的“中间模块”，那么你可以考虑使用有多个阶段的流水线。这种架构可能更优，因为你可以使用所有可用的数据来训练中间模块。</p>
 <p>直到更多端到端数据可用之前，我相信非端到端方法对自动驾驶更有希望：其架构更好匹配数据的可用性。</p>
@@ -246,11 +246,11 @@
 
         <script src="elasticlunr-ef4e11c1.min.js"></script>
         <script src="mark-09e88c2c.min.js"></script>
-        <script src="searcher-c2a407aa.js"></script>
+        <script src="searcher-09f2665d.js"></script>
 
         <script src="clipboard-1626706a.min.js"></script>
         <script src="highlight-abc7f01d.js"></script>
-        <script src="book-a0b12cfe.js"></script>
+        <script src="book-609e4cb8.js"></script>
 
         <!-- Custom JS scripts -->
 
