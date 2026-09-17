@@ -36,7 +36,7 @@
             const path_to_root = "";
             const default_light_theme = "light";
             const default_dark_theme = "navy";
-            window.path_to_searchindex_js = "searchindex-689c00d2.js";
+            window.path_to_searchindex_js = "searchindex-48c0ffb3.js";
         </script>
         <!-- Start loading toc.js asap -->
         <script src="toc-0198ce5f.js"></script>
@@ -470,12 +470,12 @@
 <h2 id="chapter-8establish-a-single-number-evaluation-metric-for-your-team-to-optimize"><a class="header" href="#chapter-8establish-a-single-number-evaluation-metric-for-your-team-to-optimize">Chapter 8、Establish a single-number evaluation metric for your team to optimize</a></h2>
 <p><strong>为您的团队建立单一数字的评估指标以进行优化</strong></p>
 <p>分类准确率是**单一数字评估指标（single-number evaluation metric）**的示例：你在开发集（或测试集）上运行分类器，然后得到样本正确分类的比例(fraction)单个数字。根据这个指标，如果分类器A获得97%的准确率，而分类器B获得90%的准确率，那么我们认为分类器A更好。</p>
-<p>相比之下，查准率（Precision）和查全率（Recall）【3】 就不是一个单一数字的评估指标：它给出了两个数字来评估分类器。拥有多个数字的评估指标使得比较算法更加困难。假设你的算法表现如下： 
-<label class="checkbox-label"><input class="checkbox-img" type="checkbox"><img src="images/myl-c8-0.jpg" alt="这里写图片描述"><span class="img-wrapper"><img src="images/myl-c8-0.jpg" alt="这里写图片描述"></span></label>
-如上所示，两个分类器都没有显而易见地比另一个更好，所以它不能立即引导你选择其中一个。</p>
+<p>相比之下，查准率（Precision）和查全率（Recall）【3】 就不是一个单一数字的评估指标：它给出了两个数字来评估分类器。拥有多个数字的评估指标使得比较算法更加困难。假设你的算法表现如下： </p>
+<p><label class="checkbox-label"><input class="checkbox-img" type="checkbox"><img src="images/myl-c8-0.jpg" alt="这里写图片描述"><span class="img-wrapper"><img src="images/myl-c8-0.jpg" alt="这里写图片描述"></span></label></p>
+<p>如上所示，两个分类器都没有显而易见地比另一个更好，所以它不能立即引导你选择其中一个。</p>
 <p>在开发期间，你的团队会尝试大量关于算法架构、模型参数、特征选择等方面的想法。使用<strong>单一数字的评估指标（single-number evaluation metric）</strong>（如精度）使得你可以根据其在该指标上的表现快速对所有模型进行排序，从而快速决定哪一个是能工作得最好的。</p>
-<p>如果你真的即关心查准率（Precision）又关心查全率（Recall），我推荐使用一种标准方法将它们组合成一个单一的数字。例如，可以取Precision和Recall的平均值，最终得到单个数字。或者，你可以计算“F1度量（F1 score）”，这是一种基于其平均值改善的方法，比简单地取平均值效果要好。【4】 
-<label class="checkbox-label"><input class="checkbox-img" type="checkbox"><img src="images/myl-c8-1.jpg" alt="这里写图片描述"><span class="img-wrapper"><img src="images/myl-c8-1.jpg" alt="这里写图片描述"></span></label></p>
+<p>如果你真的即关心查准率（Precision）又关心查全率（Recall），我推荐使用一种标准方法将它们组合成一个单一的数字。例如，可以取Precision和Recall的平均值，最终得到单个数字。或者，你可以计算“F1度量（F1 score）”，这是一种基于其平均值改善的方法，比简单地取平均值效果要好。【4】 </p>
+<p><label class="checkbox-label"><input class="checkbox-img" type="checkbox"><img src="images/myl-c8-1.jpg" alt="这里写图片描述"><span class="img-wrapper"><img src="images/myl-c8-1.jpg" alt="这里写图片描述"></span></label></p>
 <p>当你面在大量的分类器中进行选择时，使用单一数字的评估指标可以加快你做出决策的能力。所有这些都给出了明确的表现排名，从而给出一个清晰的前进方向。</p>
 <p>作为最后一个例子，假如你分别得在四个主要市场（（i）美国，（ii）中国，（iii）印度和（iv）其他地区）跟踪猫分类器的准确率。这里提供了四个指标。通过对这四个数据进行平均或加权平均，最终得到一个单一数字度量。取平均值或加权平均值是将多个指标合并为一个的最常见的方法之一。</p>
 <p>———————————————————— </p>
@@ -486,9 +486,9 @@
 <h2 id="chapter-9optimizing-and-satisficing-metrics"><a class="header" href="#chapter-9optimizing-and-satisficing-metrics">Chapter 9、Optimizing and satisficing metrics</a></h2>
 <p><strong>优化指标和满足指标</strong></p>
 <p>这里有组合多个评估指标的另一种方法。</p>
-<p>假设你同时关心算法的准确率和运行时间。你需要在如下三个分类器中进行选择： 
-<label class="checkbox-label"><input class="checkbox-img" type="checkbox"><img src="images/myl-c9-0.jpg" alt="这里写图片描述"><span class="img-wrapper"><img src="images/myl-c9-0.jpg" alt="这里写图片描述"></span></label>
-如果将准确率和运行时间通过如下一个公式得到单个评估指标会看起来不太自然，例如：</p>
+<p>假设你同时关心算法的准确率和运行时间。你需要在如下三个分类器中进行选择：</p>
+<p><label class="checkbox-label"><input class="checkbox-img" type="checkbox"><img src="images/myl-c9-0.jpg" alt="这里写图片描述"><span class="img-wrapper"><img src="images/myl-c9-0.jpg" alt="这里写图片描述"></span></label></p>
+<p>如果将准确率和运行时间通过如下一个公式得到单个评估指标会看起来不太自然，例如：</p>
 <pre><code>Accuracy − 0.5∗RunningTime
 </code></pre>
 <p>你可以这样做：首先，定义一个“acceptable”的运行时间。例如任何运行时间在100ms以内的算法都是可接受的。然后，根据满足运行时间标准的分类器，最大化准确率。这里，运行时间就是一个“satisficing metric”，你的分类器必须要在这个指标上表现地“good enough”就行，这就意味着它最多为100ms。准确率是一个“optimizing metric”。</p>
@@ -517,15 +517,21 @@
 <p>如果你之后发现初始的开发/测试集或评估指标与目标有失偏颇，那么使用一切手段快速更改它们。例如，如果在你的开发集和评估指标上分类器A比分离器B表现好，但你的团队认为分类器B在实际产品中表现的更优越，这可能表示你需要更改开发/测试集或评估指标。</p>
 <p>有三个主要原因可能会造成开发集/评估指标不正确地把分类器A排得更高：</p>
 <ol>
-<li>你需要做得好的实际数据的分布和开发/测试集不同。 
-假设你的初始开发/测试集主要是一些成年猫的照片。你查看猫app，发现用户上传了比预期多很多的幼猫的照片。所以，开发/测试集的数据分布并不能代表你需要做好的实际的数据分布。这种情况下，更新你的开发/测试集，使其更具代表性。 
-<label class="checkbox-label"><input class="checkbox-img" type="checkbox"><img src="images/myl-c11-0.jpg" alt="这里写图片描述"><span class="img-wrapper"><img src="images/myl-c11-0.jpg" alt="这里写图片描述"></span></label></li>
-<li>你已经在开发集上过拟合了。 
+<li>
+<p>你需要做得好的实际数据的分布和开发/测试集不同。 
+假设你的初始开发/测试集主要是一些成年猫的照片。你查看猫app，发现用户上传了比预期多很多的幼猫的照片。所以，开发/测试集的数据分布并不能代表你需要做好的实际的数据分布。这种情况下，更新你的开发/测试集，使其更具代表性。</p>
+<p><label class="checkbox-label"><input class="checkbox-img" type="checkbox"><img src="images/myl-c11-0.jpg" alt="这里写图片描述"><span class="img-wrapper"><img src="images/myl-c11-0.jpg" alt="这里写图片描述"></span></label></p>
+</li>
+<li>
+<p>你已经在开发集上过拟合了。
 在开发集上反复评估想法的过程导致算法逐渐对开发集“过拟合”。当完成开发后，你将在测试集上评估你的算法。如果你的算法在开发集上的表现远好于在测试集上的表现，这意味着你已经过拟合开发集。这种情况下，更新开发集。 
-如果你需要跟踪团队的进度，你也可以在测试集上定期评估你的系统——每月或每周一次。但不要使用测试集来对算法做任何决定，包括是否回滚到上一周的系统。如果这样做，你将开始过拟合测试集，并且不能再依靠它来完全无偏见的评估系统的性能（你可能会在发表研究论文或做出重要商业决策是使用这个指标）。</li>
-<li>评估指标衡量的并不是项目所需要优化的东西。 
+如果你需要跟踪团队的进度，你也可以在测试集上定期评估你的系统——每月或每周一次。但不要使用测试集来对算法做任何决定，包括是否回滚到上一周的系统。如果这样做，你将开始过拟合测试集，并且不能再依靠它来完全无偏见的评估系统的性能（你可能会在发表研究论文或做出重要商业决策是使用这个指标）。</p>
+</li>
+<li>
+<p>评估指标衡量的并不是项目所需要优化的东西。 
 假设对于你的猫app，你的评估指标是分类准确率。当前在该指标下分类器A优于分类器B。但是假设你尝试了这两种算法，发现分类器A会偶尔允许色情图片通过。那么即使分类器A准确率更高，偶尔的色情图片所带来的坏影响也意味着其表现是不可接受的。你需要做什么呢？ 
-这里，该评估指标不能辨别出对产品而言算法B比算法A更好这一事实。所以，你不能再相信该指标能挑选出最佳算法。是时候改变评估指标了。例如，你可以更改评估指标，严厉惩罚色情图片分类错误。我强烈建议你选择一个新的评估指标，并用新的标准来为团队明确定义一个新的目标，而不是在一个不可信的评估指标下处理太长时间，并恢复到手工选择分类器。</li>
+这里，该评估指标不能辨别出对产品而言算法B比算法A更好这一事实。所以，你不能再相信该指标能挑选出最佳算法。是时候改变评估指标了。例如，你可以更改评估指标，严厉惩罚色情图片分类错误。我强烈建议你选择一个新的评估指标，并用新的标准来为团队明确定义一个新的目标，而不是在一个不可信的评估指标下处理太长时间，并恢复到手工选择分类器。</p>
+</li>
 </ol>
 <p>在项目中改变开发/测试集和评估指标是很常见的。拥有一个初始的开发/测试集和评估指标能帮助你快速迭代。如果你发现 开发/测试集和评估指标不再使你的团队在正确方向上前进，这不是什么大问题！只需要改变它们，并确保你的团队知道新的方向。</p>
 <div style="break-before: page; page-break-before: always;"></div>
@@ -562,8 +568,8 @@
 <h1 id="误差分析查看开发集样本以评估想法"><a href="#误差分析查看开发集样本以评估想法" class="header">误差分析：查看开发集样本以评估想法</a></h1>
 <h2 id="chapter-14error-analysis-look-at-dev-set-examples-to-evaluate-ideas"><a class="header" href="#chapter-14error-analysis-look-at-dev-set-examples-to-evaluate-ideas">Chapter 14、Error analysis: Look at dev set examples to evaluate ideas</a></h2>
 <p><strong>误差分析：查看开发集样本以评估想法</strong></p>
-<p>当你使用猫app时，注意到一些被错误识别成猫的狗的样本。一些狗长的像猫！ 
-<label class="checkbox-label"><input class="checkbox-img" type="checkbox"><img src="images/myl-c13-0.jpg" alt="这里写图片描述"><span class="img-wrapper"><img src="images/myl-c13-0.jpg" alt="这里写图片描述"></span></label></p>
+<p>当你使用猫app时，注意到一些被错误识别成猫的狗的样本。一些狗长的像猫！ </p>
+<p><label class="checkbox-label"><input class="checkbox-img" type="checkbox"><img src="images/myl-c13-0.jpg" alt="这里写图片描述"><span class="img-wrapper"><img src="images/myl-c13-0.jpg" alt="这里写图片描述"></span></label></p>
 <p>于是一个团队成员建议和第三方软件合作，使系统可以更好的处理狗样本。这些改变需要花费一个月的时间，并且团队成员热衷于这一方案。你应该要求他们这样做吗？</p>
 <p>在为这个任务投资一个月之前，我建议你首先评估一下它实际上会提高多少系统的准确率。然后你才能理性地选择是否值得花费这一个月的开发时间，还是使用这段时间做些别的事情更好。</p>
 <p>具体来说，你可以做以下事情：</p>

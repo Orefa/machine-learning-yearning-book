@@ -35,7 +35,7 @@
             const path_to_root = "";
             const default_light_theme = "light";
             const default_dark_theme = "navy";
-            window.path_to_searchindex_js = "searchindex-689c00d2.js";
+            window.path_to_searchindex_js = "searchindex-48c0ffb3.js";
         </script>
         <!-- Start loading toc.js asap -->
         <script src="toc-0198ce5f.js"></script>
@@ -177,9 +177,9 @@
                         <h2 id="chapter-9optimizing-and-satisficing-metrics"><a class="header" href="#chapter-9optimizing-and-satisficing-metrics">Chapter 9、Optimizing and satisficing metrics</a></h2>
 <p><strong>优化指标和满足指标</strong></p>
 <p>这里有组合多个评估指标的另一种方法。</p>
-<p>假设你同时关心算法的准确率和运行时间。你需要在如下三个分类器中进行选择： 
-<label class="checkbox-label"><input class="checkbox-img" type="checkbox"><img src="images/myl-c9-0.jpg" alt="这里写图片描述"><span class="img-wrapper"><img src="images/myl-c9-0.jpg" alt="这里写图片描述"></span></label>
-如果将准确率和运行时间通过如下一个公式得到单个评估指标会看起来不太自然，例如：</p>
+<p>假设你同时关心算法的准确率和运行时间。你需要在如下三个分类器中进行选择：</p>
+<p><label class="checkbox-label"><input class="checkbox-img" type="checkbox"><img src="images/myl-c9-0.jpg" alt="这里写图片描述"><span class="img-wrapper"><img src="images/myl-c9-0.jpg" alt="这里写图片描述"></span></label></p>
+<p>如果将准确率和运行时间通过如下一个公式得到单个评估指标会看起来不太自然，例如：</p>
 <pre><code>Accuracy − 0.5∗RunningTime
 </code></pre>
 <p>你可以这样做：首先，定义一个“acceptable”的运行时间。例如任何运行时间在100ms以内的算法都是可接受的。然后，根据满足运行时间标准的分类器，最大化准确率。这里，运行时间就是一个“satisficing metric”，你的分类器必须要在这个指标上表现地“good enough”就行，这就意味着它最多为100ms。准确率是一个“optimizing metric”。</p>
